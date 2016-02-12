@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="inheritanceDemo">
+
+  <head>
+    <script data-require="angular.js@1.5.0" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>AngularJS - Controller Inheritance!</h1>
+    
+    <section ng-controller="parentCtrller as parent" class="parent">
+      <h1>{{parent.title}}</h1>
+      <a href="" ng-click="parent.click()">Click here!</a>
+    </section>
+    
+    <section ng-controller="childCtrller as child" class="child">
+      <h1>{{child.child.title}}</h1>
+      <a href="" ng-click="child.child.click()">Click here!</a>
+    </section>
+  </body>
+
+</html>
